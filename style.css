@@ -1,0 +1,513 @@
+    /* --------------------------------
+    ------THIS IS NAVIGATION BAR-------
+    ----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+   min-height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.5)),url(Images/watotoback.jpg);
+   background-position: center;
+   background-size: cover;
+   position: relative;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  flex: 1;
+  text-align: right;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.navbar ul li a{
+  color: cyan;
+  text-decoration: none;
+  font-size:15px;
+}
+.navbar ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #FF00FF;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 60px;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 16px;
+}
+.blog-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.blog-btn:hover{
+  border: 1px solid #f44336;
+  background:  #f44336;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+ @media(max-width: 700px){
+   .text-box h1{
+     font-size: 20px;
+   }
+   .navbar ul li {
+     display: block;
+   }
+   .navbar {
+     position: fixed;
+     background: #9FAFDF;
+     height: 100vh;
+     width: 200px;
+     top: 0;
+     right: -200px;
+     text-align: left;
+     z-index: 2;
+     transition: 1s;
+   }
+   nav .fa{
+     display:block;
+     color: #fff;
+     margin: 10px;
+     font-size: 22px;
+     cursor: pointer;
+   }
+   .navbar ul {
+     padding: 30px;
+   }
+ }
+/*-------- WHAT WE DO --------*/
+.whatwedo {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+}
+.row {
+  margin-top: 5%;
+  display:flex;
+  justify-content: space-between;
+}
+.whatwedo-col {
+  flex-basis: 31%;
+  background: #FFDEAD;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.whatwedo-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+}
+  @media (max-width: 700px) {
+    .row{
+      flex-direction: column;
+    }
+
+}
+        /*---- OUR IMPACT----*/
+.ourimpact {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.ourimpact-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ourimpact-col img{
+  display: block;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover{
+  background:  rgba(226, 0, 0, 0.7);
+}
+.layer h4{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h4{
+  bottom: 49%;
+  opacity: 1;
+}
+      /* CONTACT US */
+.contactus{
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(Images/watotoback1.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.contactus h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+ @media (max-width: 700px) {
+   .contactus h1{
+     font-size: 25px;
+   }
+ }
+     /* FOOTER */
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.icons .fa {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.fa-copyright{
+  color: #f44336;
+}
+         /* -------------- ABOUT US PAGE---------- */
+
+
+         /* Header */
+.sub-header{
+  height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(Images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.textbox1 {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.textbox1 h1{
+  font-size: 45px;
+}
+.textbox1 p{
+  margin: 10px 0 40px;
+  font-size: 16px;
+  color: #777;
+}
+         /* -------About Us---------- */
+.aboutus{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+        /* -------Team Page-----------  */
+
+.ourteam{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.ourteam-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ourteam-col img{
+  width: 360px;
+}
+.layer1{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer1:hover{
+  background:  rgba(225,69,0, 0.6);
+}
+.layer1 h4{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer1:hover h4{
+  bottom: 49%;
+  opacity: 1;
+}
+@media (max-width: 700px) {
+  .ourteam-col img{
+    width: 360px;
+  }
+
+}
+.donation{
+  min-height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(Images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.donation h1{
+  color: white;
+}
+.donation-col img{
+ padding: 50px;
+}
+
+
+
+
+       /* ----CONTACT US ----- */
+.contact1{
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contactus1{
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.form-group input,textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid rgba(128,128,128, 0.199);
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+textarea {
+  resize: vertical;
+}
+@media (max-width: 700px) {
+  .form-group{
+    margin-top: 0px;
+    font-size: 15px;
+  }
+
+}
+button[type="submit"]{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  color: rgb(27, 166, 247);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+button[type="submit"]:hover{
+  background-color: rgb(214, 226, 236);
+}
+
+
+     /* -------BLOG PAGE---------- */
+
+
+.sub-header1{
+  height: 35vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(Images/blogpic.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.blog-content{
+  width: 80%;
+  margin: auto;
+  padding: 60px 0;
+}
+.blog-left{
+  flex-basis: 65%;       // Ukubwa wa left-page yenyewe
+}
+.blog-left img{
+  width: 100%;
+}
+.blog-left h2{
+  color: #777;
+  font-weight: 600;
+  margin: 30px 0;
+  text-align: center;
+}
+.blog-left p{
+  color: #000;
+  padding: 0;
+  font-size: 18px;
+  line-height: 25px;
+  height: 94px;
+  overflow: hidden;
+}
+.blog-left a{
+  display: inline-block;
+  color: #fff;
+  background-color: #2196f3;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.blog-left.showContent p{
+  height: auto;
+}
+.blog-left.showContent a.readmore-btn{
+  background-color: red;
+}
+.blog-left a:hover{
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.blog-right{
+  flex-basis: 32%;
+}
+.blog-right h3 {
+  background: #f44336;
+  color: #fff;
+  padding: 7px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.blog-right div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.blog-right span a{
+  text-decoration: none;
+  color: #999;
+}
+.blog-right span a:hover{
+  color: tomato;
+}
+@media (max-width: 700px) {
+  .blog-left p{
+    font-size: 17px;
+  }
+
+}
+.giant {
+  height: 600px;
+}
+@media (max-width: 700px) {
+  .giant{
+    width: 400px;
+    height: 400px;
+  }
+
+}
