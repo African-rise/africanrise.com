@@ -20,6 +20,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+nav a img{
+  width: 250px;
+}
 .navbar {
   flex: 1;
   text-align: right;
@@ -84,8 +87,18 @@ nav .fa {
   display: none;
 }
  @media(max-width: 700px){
+   nav {
+   padding: 0;
+   }
+   nav a img{
+     width: 180px;
+     padding: 0 0;
+   }
    .text-box h1{
      font-size: 20px;
+   }
+   .text-box p{
+     font-size: 14px;
    }
    .navbar ul li {
      display: block;
@@ -118,6 +131,14 @@ nav .fa {
   margin: auto;
   text-align: center;
   padding-top: 100px;
+}
+.whatwedo h1::after{
+  content: '';
+  width: 19%;
+  height: 2px;
+  background: darkblue;
+  display: block;
+  margin: auto;
 }
 h1{
   font-size: 36px;
@@ -157,6 +178,9 @@ h3 {
     .row{
       flex-direction: column;
     }
+    .whatwedo h1::after{
+      width: 58%;
+    }
 
 }
         /*---- OUR IMPACT----*/
@@ -165,6 +189,14 @@ h3 {
   margin: auto;
   text-align: center;
   padding-top: 50px;
+}
+.ourimpact h1::after{
+  content: '';
+  width: 17%;
+  height: 2px;
+  background: darkblue;
+  display: block;
+  margin: auto;
 }
 .ourimpact-col {
   flex-basis: 32%;
@@ -204,7 +236,13 @@ h3 {
   bottom: 49%;
   opacity: 1;
 }
-      /* CONTACT US */
+@media (max-width: 700px) {
+  .ourimpact h1::after{
+    width: 54%;
+  }
+
+}
+      /*------ CONTACT US------ */
 .contactus{
   margin: 100px auto;
   width: 80%;
@@ -275,12 +313,32 @@ h3 {
   font-size: 16px;
   color: #777;
 }
-         /* -------About Us---------- */
+                /* -------About Us---------- */
 .aboutus{
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
+}
+.aboutus h1::after{
+  content: '';
+  width: 20%;
+  height: 2px;
+  background: darkblue;
+  display: block;
+  margin: auto;
+}
+.aboutus-col p {
+  font-size: 16px;
+}
+@media (max-width: 700px) {
+  .aboutus h1::after{
+    width: 60%;
+  }
+  .aboutus-col p{
+    font-size: 14px;
+  }
+
 }
         /* -------Team Page-----------  */
 
@@ -299,6 +357,7 @@ h3 {
 }
 .ourteam-col img{
   width: 360px;
+  display: block;
 }
 .layer1{
   background: transparent;
@@ -490,7 +549,7 @@ button[type="submit"]:hover{
 }
 .blog-right span a{
   text-decoration: none;
-  color: #999;
+  color: lightgreen;
 }
 .blog-right span a:hover{
   color: tomato;
@@ -499,7 +558,6 @@ button[type="submit"]:hover{
   .blog-left p{
     font-size: 17px;
   }
-
 }
 .giant {
   height: 600px;
